@@ -23,7 +23,7 @@ int		main(int ac, char **av, char **env)
 	(void)av;
 
 	line = (const char *)malloc(sizeof(char) * 9);
-	line = "\x1B[33m$$>>\x1B[0m ";
+	line = "\x1B[34m$$>>l ";
 	mini_head();
 	cmd_head();
 	while (1)

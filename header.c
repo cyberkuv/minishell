@@ -58,5 +58,5 @@ void		cmd_head(void)
 	ft_putstr("\x1B[0m");
 	ft_putstr("\x1B[31m$-----------------------------------------");
 	ft_putendl("--------------------------$\x1B[0m");
-	ft_putstr("\x1B[34m							by Emmanuel**\x1B[0m\n\n");
+	ft_putstr("\x1B[34m			            		   by emmanuel onwe-$\x1B[0m\n\n");
 }

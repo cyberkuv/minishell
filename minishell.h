@@ -13,21 +13,33 @@
 #ifndef MINISHELL_H
 # define MINISHELL_H
 
+# define MAXCOM 1000
+# define MAXLIST 100
+# define clear() ft_printf("\033[H\033[J")
+
 # include <stdlib.h>
 # include <unistd.h>
 # include <dirent.h>
 # include <sys/stat.h>
+# include <sys/types.h>
 # include <sys/wait.h>
 # include <signal.h>
 # include <stdio.h>
 # include <readline/readline.h>
+# include <readline/history.h>
 # include "./libft/libft.h"
 
 void					mini_head(void);
 void					cmd_head(void);
-int						main(int ac, char **av, char **env);
-int						mini_cd(char **args);
-int						mini_exit(char **args);
-int						mini_help(char **args);
+void                    init_shell();
+void                    get_dir();
+int                     take_input(char *str);
+void                    exec_args(char **parsed);
+void                    exec_args_piped(char** parsed, char** parsedpipe);
+int                     cmd_handler(char **parsed);
+int                     parse_pipe(char *str, char **strpiped);
+void                    parse_space(char *str, char **parsed);
+int                     process_string(char *str, char **parsed, char **parsed_pipe);
+int						main();
 
 #endif

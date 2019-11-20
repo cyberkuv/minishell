@@ -24,8 +24,12 @@ LIB_DIR = ./libft/
 
 #Source Files
 SRC_FILES = header.c\
-			shell_main.c\
-			built_ins.c\
+			init_shell.c\
+			exec.c\
+			cmd_handler.c\
+			parse.c\
+			process.c\
+			main.c\
 
 # Stating when to focus compilation and clean up
 LIBFT = $(addprefix $(LIB_DIR), libft.a)
